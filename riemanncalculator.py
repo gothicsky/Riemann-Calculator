@@ -108,6 +108,8 @@ def operation(c):
         return math.isinf(val)
     if "isnan" in c:
         return math.isnan(val)
+    else:
+        return val
 
 
 
@@ -133,4 +135,5 @@ for y in functions:
     areas.append(y*dx)
 
 print(functions)
+
 print(sum(areas))
