@@ -138,5 +138,6 @@ ureas = [eval(x) for x in ureas]
 
 print(f"Overestimate: {sum(areas)}")
 print(f"Underestimate: {sum(ureas)}")
-print(f"Average: {sum(((areas+ureas))/2)}")
+print(f"Average: {sum((areas+ureas))/2}")
+
 
