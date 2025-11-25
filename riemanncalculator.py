@@ -136,6 +136,7 @@ ureas = [str(x) for x in areas]
 ureas.pop()
 ureas = [eval(x) for x in ureas]
 
-print(f"Overestimate: {sum(areas)}"))
-print(f"Underestimate: {sum(ureas}"))
-print(f"Average: {sum((areas+ureas))/2}")
+print(f"Overestimate: {sum(areas)}")
+print(f"Underestimate: {sum(ureas)}")
+print(f"Average: {sum(((areas+ureas))/2)}")
+
