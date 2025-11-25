@@ -4,7 +4,7 @@ a = input("Function: ")
 
 def operation(c):
 
-    val = a.split('(')[1].split(')')[0]
+    val = a.split('!')[1].split('!')[0]
     val = eval(val)
     # --- Number-theoretic and representation functions ---
     if "ceil" in c:
@@ -108,14 +108,14 @@ def operation(c):
         return math.isinf(val)
     if "isnan" in c:
         return math.isnan(val)
+
     else:
         return val
 
 
-
-xi = float(input("Lower bound: "))
-xf = float(input("Upper bound: "))
-dx = float(input("Distance: "))
+xi = eval(input("Lower bound: "))
+xf = eval(input("Upper bound: "))
+dx = eval(input("Distance: "))
 
 listx = []
 functions = []
@@ -125,8 +125,6 @@ while xi<=xf:
     listx.append(xi)
     xi = xi + dx
 
-print(listx)
-
 
 for x in listx:
     functions.append(operation(a))
@@ -134,6 +132,10 @@ for x in listx:
 for y in functions:
     areas.append(y*dx)
 
-print(functions)
+ureas = [str(x) for x in areas]
+ureas.pop()
+ureas = [eval(x) for x in ureas]
 
-print(sum(areas))
+print(f"Overestimate: {sum(areas)}"))
+print(f"Underestimate: {sum(ureas}"))
+print(f"Average: {sum((areas+ureas))/2}")
